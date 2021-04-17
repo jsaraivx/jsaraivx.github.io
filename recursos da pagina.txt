@@ -16,3 +16,8 @@ FONTE CORPO
 <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
 
 font-family: 'Patua One', cursive;
+
+BOTAO PRONTO GITHUB
+
+<a href="https://github.com/jsaraivx"><img src="img/icons/octocat.svg" width="50px"></a>
+<a href="https://github.com/jsaraivx"><img src="img/icons/octocat.svg" width="50px"></a>
