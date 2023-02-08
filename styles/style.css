@@ -69,7 +69,7 @@ form{
     flex-direction: column;
     width: 70%;
     margin-top: 15px;
-
+    margin-bottom: 6em;
 }
 form h3{
     text-align: center;
