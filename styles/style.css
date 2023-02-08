@@ -32,7 +32,7 @@ a:hover{
 main{
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 h2{
     font-size: 56px;
@@ -48,6 +48,7 @@ p{
     font-family: poppinslight;
 }
 img{
+    margin-top: 25px;
     width: 580px;
     margin-left: 75px
 }
@@ -67,7 +68,11 @@ form{
     display: flex;
     flex-direction: column;
     width: 70%;
+    margin-top: 15px;
 
+}
+form h3{
+    text-align: center;
 }
 input{
     margin-top: 20px;
@@ -93,4 +98,18 @@ form [type='submit']{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
+}
+.second-content h1{
+    line-height: 40px;
+    max-width: 500px;
+    font-family: poppinsbold;
+}
+.second-content p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: poppinslight;
+
+}
+.second-content{
+    flex-direction:column;
 }
