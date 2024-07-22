@@ -149,7 +149,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
             <a
               className="bg-gradient-to-tr from-purple-900 via-blue-700 to-red-800 px-2 rounded-sm animate-bounce"
-              href="https://github.com/jsaraivx"
+              href="https://jsaraivx-woovi-frontend-challenge.vercel.app/"
             >
               <h3 className="text-xl">
                 <b>Woovi Frontend Engineer</b> / Challenge
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
             <a
               className="bg-gradient-to-tr from-purple-900 via-blue-700 to-red-800 px-2 rounded-sm animate-bounce"
-              href="https://jsaraivx-woovi-frontend-challenge.vercel.app/"
+              href="https://github.com/jsaraivx/pomodoit"
             >
               <h3 className="text-xl">
                 <b>Pomodoit</b> / SAAS
