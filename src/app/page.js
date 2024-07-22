@@ -6,17 +6,19 @@ import { TypographyH1 } from "@/components/ui/typo/TypographyH1";
 import { TypographyH3gr } from "@/components/ui/typo/TypographyH3gr";
 import { TypographyList } from "@/components/ui/typo/TypographyList";
 import { TypographyP } from "@/components/ui/typo/TypographyP";
+import { buttonVariants } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-tr from-black via-slate-900 to-red-950 ">
+    <main className="bg-gradient-to-tr max-w-screen from-black via-slate-900 to-red-950 ">
       {/*<header><NavMenu/></header>*/}
 
       <section className="flex min-h-screen flex-col items-center px-8">
         <section className="items-center flex flex-col md:w-5/12 my-12">
           <Avatar className="w-48 h-48 md:w-72 md:h-72 mb-12 ">
             <AvatarImage src="https://github.com/jsaraivx.png" />
-            <AvatarFallback>JS</AvatarFallback>
+            <AvatarFallback className='text-9xl' >JS</AvatarFallback>
           </Avatar>
           <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-8xl">
             João Saraiva!
@@ -26,7 +28,7 @@ export default function Home() {
             Desenvolvedor WEB, focado em tirar idéias do papel e transforma-las
             em aplicações modernas e responsíveis para seus clientes.
           </p>
-          <Button className="mt-8 text-xl px-8 py-6">Entrar em contato</Button>
+          <Button className="mt-8 text-xl px-8 py-6"> <Link href='https://github.com/jsaraivx' >Entrar em contato</Link></Button>
           <div className="mb-24"></div>
         </section>
 
@@ -42,11 +44,10 @@ export default function Home() {
             Github, métodos ágeis como Kanban..
           </p>
         </section>
-        <section className="items-center flex flex-col my-12 md:w-10/12">
+        <section className="items-center flex flex-col  my-12 md:w-10/12">
           <TypographyH1 content="EXPERIÊNCIA" />
           <TypographyH3gr content="EXPLORE NOW" />
-          <section className="items-center flex flex-col my-12 md:w-12/12">
-            <div className="flex flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
+            <div className="flex flex-col mt-12 md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
               <h3 className="text-xl">
                 <b>PHARMABULL (freelance)</b> / Desenvolvedor Frontend Junior
               </h3>
@@ -55,7 +56,7 @@ export default function Home() {
             <div className="flex justify-center md:mb-4">
               <TypographyP content="Fui o responsável desde o planejamento até a criação do site oficial da empresa PharmaBull, um projeto que nasceu com o objetivo de se tornar uma das maiores Fármácias pet do Brasil. Dentre as etapas deste projeto, começamos pela captação de idéias do cliente, e depois protótipo baseado em outros design's, após isso foi feita a estruturação do projeto" />
             </div>
-            <div className="flex md:justify-start md:flex-row ">
+            <div className="flex flex-wrap md:justify-start md:flex-row ">
               <Badge className=" dark:bg-gradient-to-l from-purple-900 via-blue-700 to-red-800 dark:text-white m-1 font-normal  md:px-3 md:py-1 md:text-xs ">
                 Wordpress
               </Badge>
@@ -91,7 +92,7 @@ export default function Home() {
               </Badge>
             </div>
 
-            <div className="flex flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
+            <div className="flex flex-col mt-10 md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
               <h3 className="text-xl">
                 <b>INTEXCAPS (freelance)</b> / Desenvolvedor Frontend Junior
               </h3>
@@ -106,7 +107,7 @@ export default function Home() {
  aplicações e sites usando Elementor, Shopify, Html e Css."
               />
             </div>
-            <div className="flex md:justify-start md:flex-row ">
+            <div className="flex flex-wrap md:justify-start md:flex-row ">
               <Badge className=" dark:bg-gradient-to-l from-purple-900 via-blue-700 to-red-800 dark:text-white m-1 font-normal  md:px-3 md:py-1 md:text-xs ">
                 Wordpress
               </Badge>
@@ -141,12 +142,12 @@ export default function Home() {
                 Bootstrap
               </Badge>
             </div>
-          </section>
+          
         </section>
         <section className="items-center flex flex-col my-12 md:w-10/12">
           <TypographyH1 content="PROJETOS" />
           <TypographyH3gr content="EXPLORE NOW" />
-          <div className="flex flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
+          <div className="flex mt-12 flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
             <a
               className="bg-gradient-to-tr from-purple-900 via-blue-700 to-red-800 px-2 rounded-sm animate-bounce"
               href="https://jsaraivx-woovi-frontend-challenge.vercel.app/"
@@ -155,7 +156,6 @@ export default function Home() {
                 <b>Woovi Frontend Engineer</b> / Challenge
               </h3>
             </a>
-            <p className="text-sm font-light">Challenge</p>
           </div>
           <div className="flex justify-center md:mb-8">
             <TypographyP
@@ -165,7 +165,7 @@ export default function Home() {
  MUI(Requisito do Projeto), Git/Github e Vercel para deploy."
             />
           </div>
-          <div className="flex md:justify-start md:flex-row ">
+          <div className="flex flex-wrap md:justify-start md:flex-row ">
             <Badge className=" dark:bg-gradient-to-l from-purple-900 via-blue-700 to-red-800 dark:text-white m-1 font-normal  md:px-3 md:py-1 md:text-xs ">
               ReactJS
             </Badge>
@@ -192,7 +192,7 @@ export default function Home() {
             </Badge>
           </div>
 
-          <div className="flex flex-col md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
+          <div className="flex mt-10 flex-col items-start md:flex-row md:justify-between md:w-7/12 md:mb-10 md:mt-12">
             <a
               className="bg-gradient-to-tr from-purple-900 via-blue-700 to-red-800 px-2 rounded-sm animate-bounce"
               href="https://github.com/jsaraivx/pomodoit"
@@ -201,7 +201,6 @@ export default function Home() {
                 <b>Pomodoit</b> / SAAS
               </h3>
             </a>
-            <p className="text-sm font-light">IN DEVELOPMENT</p>
           </div>
           <div className="flex justify-center md:mb-8">
             <TypographyP
@@ -209,7 +208,7 @@ export default function Home() {
 and technologies."
             />
           </div>
-          <div className="flex md:justify-start md:flex-row ">
+          <div className="flex flex-wrap md:justify-start md:flex-row ">
             <Badge className=" dark:bg-gradient-to-l from-purple-900 via-blue-700 to-red-800 dark:text-white m-1 font-normal  md:px-3 md:py-1 md:text-xs ">
               ReactJS
             </Badge>
