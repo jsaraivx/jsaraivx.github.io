@@ -558,6 +558,66 @@ section {
     line-height: 1.6;
 }
 
+/* Profile Photo & Card */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    object-fit: cover;
+    transition: border-color var(--transition);
+}
+
+.profile-photo:hover {
+    border-color: var(--accent);
+}
+
+/* GitHub Contribution Graph */
+.github-graph {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.github-graph a {
+    display: block;
+}
+
+.github-chart {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 6px;
+    opacity: 0.85;
+    transition: opacity var(--transition);
+}
+
+.github-chart:hover {
+    opacity: 1;
+}
+
+.github-graph-label {
+    margin-top: 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.github-graph-label i {
+    font-size: 0.9rem;
+}
+
 /* --- EXPERIENCE --- */
 .experience-timeline {
     display: flex;
