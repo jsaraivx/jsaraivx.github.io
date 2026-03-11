@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- SEO -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.png">
     <title>João Saraiva — Data Engineer</title>
     <meta name="description"
         content="Engenheiro de Dados focado em pipelines escaláveis, arquitetura de dados e governança. Experiência em modernização de fluxos críticos para clientes globais na Avdata Consulting.">
     <meta name="keywords"
-        content="Data Engineer, Engenheiro de Dados, GCP, BigQuery, Airflow, Kafka, Python, dbt, Arquitetura Medalhão, Pipeline de Dados, Data Quality, Data Governance">
+        content="Data Engineer, Engenheiro de Dados, GCP, BigQuery, Airflow, Kafka, Python, dbt, Power BI, DAX, Looker, Arquitetura Medalhão, Pipeline de Dados, Data Quality, Data Governance">
     <meta name="author" content="João Saraiva">
 
     <!-- Open Graph -->
@@ -101,8 +103,7 @@
                 <div class="about-content reveal">
                     <div class="about-text">
                         <p>
-                            Lidero a modernização de fluxos de dados críticos para clientes globais em operação remota
-                            na Avdata Consulting.
+                            Lidero a modernização de fluxos de dados críticos para clientes globais na Avdata Consulting — da ingestão no GCP até a modelagem em Power BI.
                         </p>
                         <p>
                             Antes de dados, passei 3 anos construindo software (React, Node, TypeScript). Essa base me
@@ -113,9 +114,9 @@
                             decisões.
                         </p>
                         <ul class="about-highlights">
-                            <li><i class="ph ph-minus"></i> Pipelines ETL/ELT na Arquitetura Medalhão (BigQuery + GCS)
-                            </li>
+                            <li><i class="ph ph-minus"></i> Pipelines ETL/ELT na Arquitetura Medalhão (BigQuery + GCS)</li>
                             <li><i class="ph ph-minus"></i> Orquestração resiliente com Airflow e Cloud Composer</li>
+                            <li><i class="ph ph-minus"></i> Integração ponta a ponta: do GCP ao Power BI e Looker</li>
                             <li><i class="ph ph-minus"></i> Data Quality, FinOps e governança como padrão</li>
                             <li><i class="ph ph-minus"></i> Explorando AI Engineering (RAG, embeddings) como próximo
                                 passo</li>
@@ -164,18 +165,12 @@
                             <span class="exp-date">Ago 2024 — Presente</span>
                         </div>
                         <ul class="exp-list">
-                            <li>Arquitetei rotinas ETL/ELT baseadas na <strong>Arquitetura Medalhão</strong> nativamente
-                                no BigQuery e Cloud Storage, reduzindo custos de processamento e acelerando a leitura
-                                analítica.</li>
-                            <li>Desenvolvi pipelines com <strong>Apache Airflow</strong> e <strong>Cloud
-                                    Composer</strong>, garantindo tolerância a falhas, alertas automatizados e
-                                idempotência nas cargas diárias.</li>
-                            <li>Refatorei lógicas legadas e projetei <strong>modelos dimensionais</strong> (Star Schema)
-                                em bancos colunares para escalar a volumetria de dados dos clientes.</li>
-                            <li>Implementei validações de <strong>Data Quality</strong> (fail-fast) para garantir
-                                consistência antes do consumo por áreas de negócio e dashboards de BI.</li>
-                            <li>Estabeleci padrões de <strong>CI/CD</strong>, versionamento (Git) e Code Reviews para o
-                                time de dados.</li>
+                            <li>Idealizei um <strong>framework metadata-driven</strong> para ingestão automatizada — novos fluxos de dados exigem apenas configuração de schemas em CSV e o arquivo SQL, eliminando gargalos operacionais.</li>
+                            <li>Arquitetei rotinas ETL/ELT na <strong>Arquitetura Medalhão</strong> no BigQuery e Cloud Storage, otimizando custos de processamento (FinOps) e performance de leitura analítica.</li>
+                            <li>Desenvolvi pipelines com <strong>Apache Airflow</strong> e <strong>Cloud Composer</strong>, garantindo tolerância a falhas, alertas automatizados e idempotência nas cargas diárias.</li>
+                            <li>Atuação intensiva com <strong>Power BI</strong>: responsável pelo ciclo de vida completo — modelagem dimensional, otimização de DAX e arquitetura de workspaces — criando dashboards críticos consumindo BigQuery.</li>
+                            <li>Refatorei lógicas legadas e projetei <strong>modelos dimensionais</strong> (Star Schema) em bancos colunares para escalar a volumetria dos clientes.</li>
+                            <li>Estabeleci padrões de <strong>CI/CD</strong>, Data Quality (fail-fast), versionamento (Git) e Code Reviews para o time de dados.</li>
                         </ul>
                     </div>
                     <!-- Freelance -->
@@ -241,7 +236,6 @@
                             <span class="tag">PySpark</span>
                             <span class="tag">Databricks</span>
                             <span class="tag">FastAPI</span>
-                            <span class="tag">Streamlit</span>
                         </div>
                     </div>
                     <div class="skill-category glass-panel">
@@ -257,6 +251,18 @@
                         </div>
                     </div>
                     <div class="skill-category glass-panel">
+                        <i class="ph ph-chart-bar skill-icon"></i>
+                        <h3>Visualização & BI</h3>
+                        <div class="tag-list">
+                            <span class="tag">Power BI (DAX)</span>
+                            <span class="tag">Modelagem Dimensional</span>
+                            <span class="tag">Governança de Workspaces</span>
+                            <span class="tag">Looker</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Plotly</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
                         <i class="ph ph-git-branch skill-icon"></i>
                         <h3>Engenharia de Software</h3>
                         <div class="tag-list">
@@ -265,7 +271,8 @@
                             <span class="tag">Pytest</span>
                             <span class="tag">Pydantic</span>
                             <span class="tag">SQLAlchemy</span>
-                            <span class="tag">Faker</span>
+                            <span class="tag">Terraform (IaC)</span>
+                            <span class="tag">Scrum / Kanban</span>
                         </div>
                     </div>
                     <div class="skill-category glass-panel">
@@ -274,8 +281,9 @@
                         <div class="tag-list">
                             <span class="tag">Medalhão (Bronze/Silver/Gold)</span>
                             <span class="tag">Star & Snowflake Schema</span>
-                            <span class="tag">Kappa Architecture</span>
+                            <span class="tag">Data Warehouse</span>
                             <span class="tag">Data Lakehouse</span>
+                            <span class="tag">Kappa Architecture</span>
                             <span class="tag">Data Mesh (conceitos)</span>
                             <span class="tag">FinOps</span>
                         </div>
@@ -453,6 +461,13 @@
                         <div class="cert-info">
                             <h4>Introduction to Apache Kafka</h4>
                             <p>DataCamp · Fev 2026</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-panel">
+                        <i class="ph ph-certificate"></i>
+                        <div class="cert-info">
+                            <h4>Get Started with Databricks for Data Engineering</h4>
+                            <p>Databricks · Dez 2025</p>
                         </div>
                     </div>
                     <div class="cert-card glass-panel">
