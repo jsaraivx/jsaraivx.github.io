@@ -539,6 +539,85 @@ section {
     line-height: 1.6;
 }
 
+/* --- EXPERIENCE --- */
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.exp-item {
+    padding: 2.5rem;
+}
+
+.exp-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.exp-item-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+.exp-company {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.exp-date {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.exp-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exp-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.exp-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.exp-list li strong {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.exp-list li:last-child {
+    margin-bottom: 0;
+}
+
 /* --- SKILLS --- */
 .skills-grid {
     display: grid;
@@ -808,6 +887,10 @@ footer {
     .hero-title {
         font-size: 2.8rem;
     }
+
+    .exp-item-header {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
@@ -840,5 +923,9 @@ footer {
 
     section {
         padding: 5rem 0;
+    }
+
+    .exp-item {
+        padding: 1.8rem;
     }
 }
