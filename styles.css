@@ -78,6 +78,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.5s var(--ease), color 0.4s var(--ease);
+    /* iOS Safe Area */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 ::selection {
@@ -254,6 +257,21 @@ header {
     z-index: 100;
     transition: all var(--transition);
     padding: 2rem 0;
+    /* iOS Safe Area — extend behind Dynamic Island/Notch */
+    padding-top: calc(2rem + env(safe-area-inset-top));
+}
+
+/* Solid cover for iOS status bar / Dynamic Island area */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: env(safe-area-inset-top);
+    background: var(--bg-primary);
+    transition: background-color 0.5s var(--ease);
+    z-index: 1;
 }
 
 header.scrolled {
@@ -261,6 +279,7 @@ header.scrolled {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 1.2rem 0;
+    padding-top: calc(1.2rem + env(safe-area-inset-top));
     border-bottom: 1px solid var(--border-color);
 }
 
