@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
-            // Very simple mobile toggle logic for Vanilla
             const isDisplayed = window.getComputedStyle(navLinksContainer).display === 'flex';
             if (isDisplayed && window.innerWidth <= 768) {
                 navLinksContainer.style.display = 'none';
@@ -81,10 +80,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinksContainer.style.top = '100%';
                 navLinksContainer.style.left = '0';
                 navLinksContainer.style.width = '100%';
-                navLinksContainer.style.background = 'rgba(10, 10, 14, 0.95)';
+                navLinksContainer.style.background = 'var(--bg-primary)';
                 navLinksContainer.style.padding = '2rem';
-                navLinksContainer.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+                navLinksContainer.style.borderBottom = '1px solid var(--border-color)';
             }
         });
     }
+
+    // --- Theme Toggle (Light/Dark) ---
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Determine initial theme: saved preference > OS preference > dark
+    const getPreferredTheme = () => {
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    };
+
+    const applyTheme = (theme) => {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+        localStorage.setItem('theme', theme);
+    };
+
+    // Apply on load
+    applyTheme(getPreferredTheme());
+
+    // Toggle on click
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            applyTheme(current === 'light' ? 'dark' : 'light');
+        });
+    }
+
+    // Listen for OS theme changes
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'light' : 'dark');
+        }
+    });
 });
