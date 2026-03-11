@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# jsaraivx.data() — Portfolio
 
-## Getting Started
+Personal portfolio site for **João Saraiva**, Data Engineer based in Rio de Janeiro, Brazil.
 
-First, run the development server:
+**Live:** [jsaraivx.github.io](https://jsaraivx.github.io)
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Structure | HTML5 (Semantic) |
+| Styling | Vanilla CSS (Custom Properties, CSS Variables) |
+| Logic | Vanilla JavaScript (ES6+) |
+| Fonts | Playfair Display, Cormorant Garamond, Inter (Google Fonts) |
+| Icons | Phosphor Icons |
+| Hosting | GitHub Pages |
+
+## Design System
+
+- **Aesthetic:** Editorial minimalism — serif typography, muted gold accent (`#c9a96e`), noise texture overlay
+- **Themes:** Dark (default) + Light mode with `localStorage` persistence and OS preference detection
+- **Typography:** Serif for display/body (Playfair Display, Cormorant Garamond), Sans-serif for UI (Inter)
+- **Animations:** Staggered hero entrance, scroll-reveal via Intersection Observer
+- **Mobile:** iOS Safe Area support (Dynamic Island / notch), responsive breakpoints at 900px and 768px
+
+## Sections
+
+- **Hero** — positioning statement + CTAs (projects, CV download)
+- **About** — career context and differentiators
+- **Experience** — professional timeline (Avdata Consulting, Freelance)
+- **Tech Stack** — 6 categories (GCP, Orchestration, Python & Data, AI Engineering, Software Engineering, Architecture)
+- **Projects** — 4 highlighted projects with tech tags (VectorHire, Stream-Guard-Kafka, BQ Schema Migrator, What-Price)
+- **Certifications** — Google Cloud, Databricks, dbt, Kafka, HackerRank + academic background
+- **Footer** — contact links (LinkedIn, GitHub, email)
+
+## Local Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Serve locally
+python3 -m http.server 8080
+
+# Open in browser
+open http://localhost:8080
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No build step, no dependencies, no `node_modules`. Just HTML, CSS, and JS.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+All content is in `index.html` — edit directly. Key files:
 
-## Learn More
+| File | Purpose |
+|------|---------|
+| `index.html` | All content and structure |
+| `styles.css` | Design system, themes, responsive rules |
+| `script.js` | Theme toggle, scroll animations, mobile menu |
 
-To learn more about Next.js, take a look at the following resources:
+### Theme Colors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit CSS variables in `:root` (dark) and `[data-theme="light"]` (light) blocks in `styles.css`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Adding Projects
 
-## Deploy on Vercel
+Copy an existing `.project-card` block in the Projects section and update:
+- Icon class (`ph ph-*`)
+- Title, subtitle, description
+- Tech tags
+- Repository link
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Push to `main` branch — GitHub Pages deploys automatically.
+
+## Author
+
+**João Saraiva**
+- Email: joaogabrielssaraiva@gmail.com
+- Location: Rio de Janeiro, Brasil
