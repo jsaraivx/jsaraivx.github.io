@@ -252,13 +252,17 @@
                             <i class="ph ph-robot"></i>
                         </div>
                         <h3 class="project-title">VectorHire</h3>
+                        <p class="project-subtitle">ATS inteligente com RAG Pipeline</p>
                         <p class="project-desc">
-                            MVP funcional de um ATS inteligente que cruza currículos com vagas usando RAG. Extrai PDFs complexos com PyMuPDF, gera embeddings semânticos com Sentence Transformers, armazena no PostgreSQL + pgvector, e usa Gemini 2.5 Flash para ranquear candidatos com saídas estruturadas via Pydantic.
+                            Sistema completo de recrutamento que cruza currículos com vagas usando <strong>Retrieval-Augmented Generation</strong>. Extrai PDFs com PyMuPDF, fatia com Semantic Chunking, vetoriza localmente com sentence-transformers e busca similaridade via PostgreSQL + pgvector. O Gemini 2.5 Flash gera pareceres estruturados (Pydantic) para cada candidato. API assíncrona com FastAPI, persistência via SQLAlchemy (Repository Pattern) e frontend desacoplado.
                         </p>
                         <div class="tag-list project-tech">
-                            <span class="tag">RAG</span>
+                            <span class="tag">FastAPI</span>
                             <span class="tag">pgvector</span>
+                            <span class="tag">RAG</span>
                             <span class="tag">Gemini API</span>
+                            <span class="tag">sentence-transformers</span>
+                            <span class="tag">PyMuPDF</span>
                             <span class="tag">Pydantic</span>
                             <span class="tag">SQLAlchemy</span>
                         </div>
@@ -273,15 +277,19 @@
                             <i class="ph ph-shield-check"></i>
                         </div>
                         <h3 class="project-title">Stream-Guard-Kafka</h3>
+                        <p class="project-subtitle">Detecção de fraudes em tempo real</p>
                         <p class="project-desc">
-                            Detecção de fraudes financeiras em streaming usando Arquitetura Kappa. Kafka (KRaft mode) recebe transações em tempo real, ksqlDB aplica Tumbling Windows para detectar anomalias, e Python processa regras de negócio complexas. Dados sintéticos via Faker, contratos com Pydantic.
+                            Pipeline de <strong>Arquitetura Kappa</strong> com processamento híbrido: ksqlDB aplica Tumbling Windows para detectar alta velocidade transacional, enquanto Python processa regras de negócio complexas (blacklist, contexto). Kafka 3.6 em KRaft mode (sem ZooKeeper), dados sintéticos realistas via Faker, contratos tipados com Pydantic e persistência em PostgreSQL via SQLAlchemy. Infraestrutura inteira orquestrada com Docker Compose.
                         </p>
                         <div class="tag-list project-tech">
-                            <span class="tag">Kafka 3.6</span>
+                            <span class="tag">Kafka 3.6 (KRaft)</span>
                             <span class="tag">ksqlDB</span>
-                            <span class="tag">Docker</span>
+                            <span class="tag">Python</span>
                             <span class="tag">PostgreSQL</span>
+                            <span class="tag">Docker Compose</span>
                             <span class="tag">Pydantic</span>
+                            <span class="tag">SQLAlchemy</span>
+                            <span class="tag">Faker</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn btn-outline-accent" target="_blank"><i class="ph ph-github-logo"></i> Repositório</a>
@@ -293,15 +301,18 @@
                         <div class="project-icon">
                             <i class="ph ph-table"></i>
                         </div>
-                        <h3 class="project-title">BigQuery Schema Migrator</h3>
+                        <h3 class="project-title">BQ Schema Migrator</h3>
+                        <p class="project-subtitle">Governança de schemas no BigQuery</p>
                         <p class="project-desc">
-                            Ferramenta de governança e CI/CD para evolução de schemas no BigQuery. Garante idempotência via checksums SHA256, execução sequencial de migrações, e deploy automatizado de scheduled queries pela Data Transfer API. Testes determinísticos com Pytest.
+                            Ferramenta de migração inspirada em Flyway/Liquibase, feita para <strong>BigQuery</strong>. Cada script SQL roda exatamente uma vez, com controle de idempotência via checksums SHA256 e tabela de controle. Scripts com header <code>@scheduled</code> são deployados automaticamente como Scheduled Queries pela Data Transfer API. Suporte a placeholders (<code>${PROJECT}</code>, <code>${DATASET}</code>), auto-discovery de credenciais e testes determinísticos com Pytest.
                         </p>
                         <div class="tag-list project-tech">
                             <span class="tag">GCP</span>
                             <span class="tag">BigQuery</span>
+                            <span class="tag">Data Transfer API</span>
                             <span class="tag">Python</span>
                             <span class="tag">Pytest</span>
+                            <span class="tag">SHA256</span>
                             <span class="tag">CI/CD</span>
                         </div>
                         <div class="project-links">
@@ -315,14 +326,18 @@
                             <i class="ph ph-chart-line-up"></i>
                         </div>
                         <h3 class="project-title">What-Price</h3>
+                        <p class="project-subtitle">Pipeline ELT de mercado cripto</p>
                         <p class="project-desc">
-                            Pipeline ELT end-to-end que extrai dados financeiros de APIs governamentais (Banco Central), transforma com Pandas garantindo alta precisão numérica, e carrega em PostgreSQL Serverless. Orquestrado com Airflow (TaskFlow API) e visualizado no Streamlit.
+                            Pipeline end-to-end que extrai dados de mercado das top 20 criptomoedas via <strong>CoinGecko API</strong> a cada hora. Orquestrado com Apache Airflow 3 (TaskFlow API + Astro), carrega em PostgreSQL Serverless (Neon) com ingestão idempotente, e expõe métricas em um dashboard Streamlit com Plotly: dominância de mercado, índice de performance, volatilidade 24h e distância do ATH. Arquitetura Bronze/Silver inspirada na Medalhão.
                         </p>
                         <div class="tag-list project-tech">
-                            <span class="tag">Airflow</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Airflow 3 (Astro)</span>
+                            <span class="tag">PostgreSQL (Neon)</span>
+                            <span class="tag">SQLAlchemy</span>
                             <span class="tag">Streamlit</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Docker Compose</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn btn-outline-accent" target="_blank"><i class="ph ph-github-logo"></i> Repositório</a>
