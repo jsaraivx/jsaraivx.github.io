@@ -652,9 +652,73 @@ section {
 .experience-timeline {
     display: flex;
     flex-direction: column;
+    gap: 2.5rem; /* Espaçamento entre os blocos de experiência */
+}
+
+/* --- Grouped Experience (Progression) --- */
+.exp-group {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
+.exp-group-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.company-logo-box {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-dim);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.exp-sub-items {
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.exp-sub-items::before {
+    content: '';
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: var(--border-color);
+}
+
+.exp-sub-item {
+    position: relative;
+}
+
+.role-dot {
+    position: absolute;
+    left: -1.55rem;
+    top: 0.6rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 2px solid var(--accent);
+    z-index: 2;
+}
+
+/* Adjustments for existing items to match group padding */
 .exp-item {
     padding: 2.5rem;
 }

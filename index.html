@@ -82,9 +82,14 @@
                         <a href="#projects" class="btn btn-primary">
                             Ver Projetos <i class="ph ph-arrow-down-right"></i>
                         </a>
+                        <a href="mailto:joaogabrielssaraiva@gmail.com" class="btn btn-secondary">
+                            Entrar em Contato <i class="ph ph-envelope-simple"></i>
+                        </a>
+                        <!-- Botão desabilitado para uso futuro
                         <a href="/curriculo.pdf" target="_blank" class="btn btn-secondary">
                             Curriculum Vitae <i class="ph ph-arrow-up-right"></i>
                         </a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -103,23 +108,17 @@
                 <div class="about-content reveal">
                     <div class="about-text">
                         <p>
-                            Lidero a modernização de fluxos de dados críticos para clientes globais na Avdata Consulting — da ingestão no GCP até a modelagem em Power BI.
+                            Meu diferencial é unir a <strong>rigorosidade da Engenharia de Software</strong> à <strong>escalabilidade da Engenharia de Dados</strong>. Atuo na liderança técnica de projetos globais, onde meu foco vai além da construção de pipelines: eu projeto a arquitetura da plataforma para garantir orquestração resiliente, alta disponibilidade e eficiência de custos (FinOps).
                         </p>
                         <p>
-                            Antes de dados, passei 3 anos construindo software (React, Node, TypeScript). Essa base me
-                            deu algo que puro SQL não dá: visão sobre como os dados impactam o produto que o usuário
-                            toca. Hoje, aplico isso projetando arquiteturas no ecossistema <strong>Google Cloud
-                                Platform</strong> — com foco em <em>Data Quality</em>, otimização de custos
-                            (<em>FinOps</em>) e pipelines idempotentes que os times de negócio confiam para tomar
-                            decisões.
+                            Acredito que a Engenharia de Dados é a fundação para a IA moderna. Recentemente, liderei a modernização da arquitetura de agentes de uma Startup SaaS Global, onde <strong>reduzi a latência de extração em 75%</strong> ao consolidar pipelines fragmentados em uma arquitetura de <em>Single Structured-Output</em> com RAG estruturado.
                         </p>
                         <ul class="about-highlights">
-                            <li><i class="ph ph-minus"></i> Pipelines ETL/ELT na Arquitetura Medalhão (BigQuery + GCS)</li>
-                            <li><i class="ph ph-minus"></i> Orquestração resiliente com Airflow e Cloud Composer</li>
-                            <li><i class="ph ph-minus"></i> Integração ponta a ponta: do GCP ao Power BI e Looker</li>
-                            <li><i class="ph ph-minus"></i> Data Quality, FinOps e governança como padrão</li>
-                            <li><i class="ph ph-minus"></i> Explorando AI Engineering (RAG, embeddings) como próximo
-                                passo</li>
+                            <li><i class="ph ph-minus"></i> <strong>Engenharia & Platform:</strong> Especialista em ecossistemas GCP e Databricks de alta volumetria.</li>
+                            <li><i class="ph ph-minus"></i> <strong>Orquestração:</strong> Implementação de ambientes Airflow em Kubernetes/Docker em escala global.</li>
+                            <li><i class="ph ph-minus"></i> <strong>Processamento:</strong> Pipelines escaláveis com PySpark para integração Kafka ↔ BigQuery.</li>
+                            <li><i class="ph ph-minus"></i> <strong>LLMops & AI:</strong> Injeção dinâmica de metadados (>15K tokens) para resolução de entidades em tempo real.</li>
+                            <li><i class="ph ph-minus"></i> <strong>Qualidade:</strong> Observabilidade via fail-fast checks e testes unitários como padrão de entrega.</li>
                         </ul>
                     </div>
                     <div class="about-visual">
@@ -129,8 +128,8 @@
                             <p class="byline-name">João Saraiva</p>
                             <p class="byline-role">Data Engineer · Avdata Consulting</p>
                             <div class="profile-stat">
-                                <span class="exp-number">3+</span>
-                                <span class="exp-text">Anos construindo software e<br>arquiteturas de dados</span>
+                                <span class="exp-number">4+</span>
+                                <span class="exp-text">Anos unindo software e<br>arquiteturas de dados</span>
                             </div>
                         </div>
                     </div>
@@ -138,7 +137,6 @@
                 <!-- GitHub Activity -->
                 <div class="github-graph reveal">
                     <a href="https://github.com/jsaraivx" target="_blank" aria-label="Ver perfil no GitHub">
-                        <!-- <img src="https://ghchart.rshah.org/c9a96e/jsaraivx" alt="Contribuições GitHub" class="github-chart" loading="lazy"> -->
                         <img src="https://ghchart.rshah.org/jsaraivx" alt="Contribuições GitHub" class="github-chart"
                             loading="lazy">
                     </a>
@@ -155,41 +153,100 @@
                     <div class="title-line"></div>
                 </div>
                 <div class="experience-timeline reveal">
-                    <!-- Avdata -->
+                    <!-- Avdata Grouped (Progression) -->
+                    <div class="exp-group glass-panel">
+                        <div class="exp-group-header">
+                            <div class="company-logo-box">
+                                <i class="ph ph-buildings"></i>
+                            </div>
+                            <div>
+                                <h3>Avdata Consultoria LTDA</h3>
+                                <p class="exp-company">Total: 1 ano 8 meses · Remoto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="exp-sub-items">
+                            <!-- Avdata DE -->
+                            <div class="exp-sub-item">
+                                <div class="role-dot"></div>
+                                <div class="exp-item-header">
+                                    <div>
+                                        <h3>Engenheiro de Dados</h3>
+                                    </div>
+                                    <span class="exp-date">Jun 2025 — Presente</span>
+                                </div>
+                                <ul class="exp-list">
+                                    <li><strong>Infraestrutura Internacional:</strong> Reduzi em 80% o tempo de intervenções manuais ao implementar uma malha de reconciliação em lote (Airflow/Kubernetes) para rotinas de Upsert globais.</li>
+                                    <li><strong>Automação & Arquitetura:</strong> Estabilizei custos de nuvem (FinOps) e destravei o consumo analítico orquestrando a conexão Kafka ↔ BigQuery via DAG Generators customizados.</li>
+                                    <li><strong>Liderança Técnica:</strong> Garanti alta disponibilidade e governança de pipelines liderando times distribuídos sob padrões enterprise de entrega.</li>
+                                </ul>
+                                <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: GCP, Spark, Databricks, Airflow, BigQuery, Kubernetes, Kafka, Python.</p>
+                            </div>
+
+                            <!-- Avdata DA -->
+                            <div class="exp-sub-item">
+                                <div class="role-dot"></div>
+                                <div class="exp-item-header">
+                                    <div>
+                                        <h3>Analista de Dados</h3>
+                                    </div>
+                                    <span class="exp-date">Set 2024 — Mai 2025</span>
+                                </div>
+                                <ul class="exp-list">
+                                    <li><strong>Analytics Engineering:</strong> Habilitei o acompanhamento de métricas internacionais ao arquitetar o ciclo completo de dados, da ingestão RAW à estruturação de Data Marts no BigQuery.</li>
+                                    <li><strong>BI Estratégico:</strong> Aumentei a precisão na tomada de decisão de lideranças globais através de modelagem dimensional Star Schema e cálculos complexos em DAX no Power BI.</li>
+                                </ul>
+                                <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: BigQuery, SQL Avançado, Power BI, DAX, Modelagem Dimensional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tropical Bud -->
                     <div class="exp-item glass-panel">
                         <div class="exp-item-header">
                             <div>
-                                <h3>Data Engineer</h3>
-                                <p class="exp-company">Avdata Consulting LTDA · Full-time</p>
+                                <h3>Software Developer (Freelance)</h3>
+                                <p class="exp-company">Tropical Bud · Portugal (Remoto)</p>
                             </div>
-                            <span class="exp-date">Ago 2024 — Presente</span>
+                            <span class="exp-date">Nov 2024 — Set 2025</span>
                         </div>
                         <ul class="exp-list">
-                            <li>Idealizei um <strong>framework metadata-driven</strong> para ingestão automatizada — novos fluxos de dados exigem apenas configuração de schemas em CSV e o arquivo SQL, eliminando gargalos operacionais.</li>
-                            <li>Arquitetei rotinas ETL/ELT na <strong>Arquitetura Medalhão</strong> no BigQuery e Cloud Storage, otimizando custos de processamento (FinOps) e performance de leitura analítica.</li>
-                            <li>Desenvolvi pipelines com <strong>Apache Airflow</strong> e <strong>Cloud Composer</strong>, garantindo tolerância a falhas, alertas automatizados e idempotência nas cargas diárias.</li>
-                            <li>Atuação intensiva com <strong>Power BI</strong>: responsável pelo ciclo de vida completo — modelagem dimensional, otimização de DAX e arquitetura de workspaces — criando dashboards críticos consumindo BigQuery.</li>
-                            <li>Refatorei lógicas legadas e projetei <strong>modelos dimensionais</strong> (Star Schema) em bancos colunares para escalar a volumetria dos clientes.</li>
-                            <li>Estabeleci padrões de <strong>CI/CD</strong>, Data Quality (fail-fast), versionamento (Git) e Code Reviews para o time de dados.</li>
+                            <li><strong>Desenvolvimento E-commerce:</strong> Acelerei o ciclo de vendas na expansão europeia ao desenvolver scripts Liquid customizados e integrações avançadas na plataforma Shopify.</li>
+                            <li><strong>Visibilidade de Operação:</strong> Forneci centralização de KPIs comerciais conectando o backend da loja à engenharia de dados para criação de dashboards de performance.</li>
                         </ul>
+                        <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: Shopify, Liquid, JavaScript, HTML, Analytics.</p>
                     </div>
+
+                    <!-- Ultraform -->
+                    <div class="exp-item glass-panel">
+                        <div class="exp-item-header">
+                            <div>
+                                <h3>Sócio-Fundador | Engenheiro de Software</h3>
+                                <p class="exp-company">Ultraform Suplementos · Autônomo</p>
+                            </div>
+                            <span class="exp-date">Ago 2023 — Jul 2024</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li><strong>Arquitetura Digital:</strong> Viabilizei o lançamento da marca desenvolvendo a infraestrutura tecnológica end-to-end, da modelagem do banco de dados à integração de fluxos logísticos.</li>
+                            <li><strong>Sistemas & Operações:</strong> Centralizei a gestão de estoque de múltiplas contas de Marketplace via implantação integral e parametrização do ERP Bling.</li>
+                        </ul>
+                        <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: Arquitetura de Sistemas, APIs, Shopify, ERP Bling, Power BI.</p>
+                    </div>
+
                     <!-- Freelance -->
                     <div class="exp-item glass-panel">
                         <div class="exp-item-header">
                             <div>
-                                <h3>Software Engineer & Data Analyst</h3>
-                                <p class="exp-company">Freelance · Autônomo</p>
+                                <h3>Engenheiro de Software & Dados</h3>
+                                <p class="exp-company">Consultoria Independente · Freelance</p>
                             </div>
-                            <span class="exp-date">Dez 2021 — Mar 2025</span>
+                            <span class="exp-date">Nov 2021 — Mai 2024</span>
                         </div>
                         <ul class="exp-list">
-                            <li>Desenvolvi scripts Python para <strong>extração de dados</strong> (Web Scraping, APIs) e
-                                integração entre sistemas heterogêneos.</li>
-                            <li>Limpei e estruturei grandes volumes de dados não padronizados (textos, logs), fornecendo
-                                bases confiáveis para modelos analíticos.</li>
-                            <li>Atuei em <strong>desenvolvimento web</strong> full-stack (React, TypeScript, Node.js,
-                                Shopify, WordPress) por 3+ anos.</li>
+                            <li><strong>Automação Python:</strong> Reduzi o esforço braçal de uma equipe de 100+ vendedores construindo bots escaláveis para gestão de anúncios em marketplaces via APIs.</li>
+                            <li><strong>Inteligência de Mercado:</strong> Estruturei bases de dados a partir de fontes não padronizadas desenvolvendo rotinas robustas de Web Scraping e higienização de logs.</li>
                         </ul>
+                        <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: Python, REST APIs, Web Scraping, SQL, Full-stack Dev.</p>
                     </div>
                 </div>
             </div>
@@ -240,7 +297,7 @@
                     </div>
                     <div class="skill-category glass-panel">
                         <i class="ph ph-brain skill-icon"></i>
-                        <h3>AI Engineering (Estudo)</h3>
+                        <h3>AI Engineering</h3>
                         <div class="tag-list">
                             <span class="tag">RAG Pipelines</span>
                             <span class="tag">pgvector</span>
@@ -329,6 +386,64 @@
                             <a href="https://github.com/jsaraivx/vectorhire" class="btn btn-outline-accent"
                                 target="_blank"><i class="ph ph-github-logo"></i>
                                 Repositório</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Architecture & LLMops -->
+                    <div class="project-card glass-panel">
+                        <div class="project-icon">
+                            <i class="ph ph-cpu"></i>
+                        </div>
+                        <h3 class="project-title">AI Architecture & LLMops</h3>
+                        <p class="project-subtitle">Modernização & Structured Output</p>
+                        <p class="project-desc">
+                            Reengenharia de um ecossistema de agentes de IA focada na consolidação de modelos para ganho
+                            de performance e redução de débito técnico. Migração de pipelines sequenciais para
+                            arquitetura de <strong>Single Structured-Output</strong>, reduzindo a latência de
+                            "cold-cache" em 75%. Implementação de RAG Estruturado com injeção dinâmica de metadados em
+                            janelas de contexto superiores a 15K tokens e validações rígidas via JSON Schema.
+                        </p>
+                        <div class="tag-list project-tech">
+                            <span class="tag">LLMops</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">Function Calling</span>
+                            <span class="tag">JSON Schema</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Claude Code</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="btn btn-secondary" style="cursor: default; border: none;">
+                                <i class="ph ph-lock"></i> Projeto Profissional
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Global Data Orchestration -->
+                    <div class="project-card glass-panel">
+                        <div class="project-icon">
+                            <i class="ph ph-flow-arrow"></i>
+                        </div>
+                        <h3 class="project-title">Global Data Orchestration</h3>
+                        <p class="project-subtitle">Resiliência em Escala Global</p>
+                        <p class="project-desc">
+                            Implementação de resiliência de dados para uma Startup SaaS Global. Projetei um sistema de
+                            <strong>backfill automatizado</strong> utilizando Apache Airflow em Kubernetes (GKE),
+                            reduzindo em 80% o esforço manual com intervenções técnicas. Estabeleci uma malha de
+                            reconciliação em lote como contingência para falhas no fluxo contínuo do Kafka, garantindo a
+                            integridade de 100% dos dados processados.
+                        </p>
+                        <div class="tag-list project-tech">
+                            <span class="tag">Apache Airflow</span>
+                            <span class="tag">GCP</span>
+                            <span class="tag">Kubernetes (GKE)</span>
+                            <span class="tag">Kafka</span>
+                            <span class="tag">Data Resilience</span>
+                            <span class="tag">Backfill</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="btn btn-secondary" style="cursor: default; border: none;">
+                                <i class="ph ph-lock"></i> Projeto Profissional
+                            </span>
                         </div>
                     </div>
 
