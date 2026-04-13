@@ -1,5 +1,6 @@
 // ==========================================
 // PORTFOLIO INTERACTIVITY SCRIPT
+// Engineering Minimalism
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,9 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             
-            // Adjust threshold for section detection
             if (scrollY >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
@@ -47,15 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: Stop observing once revealed
                 observer.unobserve(entry.target);
             }
         });
     };
 
     const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px"
     };
 
     const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
@@ -64,63 +62,60 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // --- Mobile Menu Toggle (Basic) ---
+    // --- Mobile Menu Toggle ---
     const menuBtn = document.querySelector('.menu-btn');
     const navLinksContainer = document.querySelector('.nav-links');
+    const navCta = document.querySelector('.nav-cta');
+    let menuOpen = false;
     
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
-            const isDisplayed = window.getComputedStyle(navLinksContainer).display === 'flex';
-            if (isDisplayed && window.innerWidth <= 768) {
-                navLinksContainer.style.display = 'none';
-            } else {
+            menuOpen = !menuOpen;
+            
+            if (menuOpen) {
                 navLinksContainer.style.display = 'flex';
                 navLinksContainer.style.flexDirection = 'column';
                 navLinksContainer.style.position = 'absolute';
                 navLinksContainer.style.top = '100%';
                 navLinksContainer.style.left = '0';
                 navLinksContainer.style.width = '100%';
-                navLinksContainer.style.background = 'var(--bg-primary)';
-                navLinksContainer.style.padding = '2rem';
-                navLinksContainer.style.borderBottom = '1px solid var(--border-color)';
+                navLinksContainer.style.background = 'var(--bg-light)';
+                navLinksContainer.style.padding = '1.5rem 2rem';
+                navLinksContainer.style.borderBottom = '1px solid var(--border-light)';
+                navLinksContainer.style.borderRadius = '0';
+                navLinksContainer.style.gap = '0.5rem';
+
+                // Style links for mobile
+                navLinksContainer.querySelectorAll('.nav-link').forEach(link => {
+                    link.style.color = 'var(--text-dark)';
+                    link.style.padding = '0.6rem 0';
+                });
+
+                // Show CTA on mobile
+                if (navCta) {
+                    navCta.style.display = 'block';
+                    navCta.style.position = 'absolute';
+                    navCta.style.top = `calc(100% + ${navLinksContainer.offsetHeight}px)`;
+                }
+
+                menuBtn.innerHTML = '<i class="ph ph-x"></i>';
+            } else {
+                navLinksContainer.style = '';
+                if (navCta) navCta.style = '';
+                menuBtn.innerHTML = '<i class="ph ph-list"></i>';
             }
         });
-    }
 
-    // --- Theme Toggle (Light/Dark) ---
-    const themeToggle = document.getElementById('theme-toggle');
-
-    // Determine initial theme: saved preference > OS preference > dark
-    const getPreferredTheme = () => {
-        const saved = localStorage.getItem('theme');
-        if (saved) return saved;
-        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    };
-
-    const applyTheme = (theme) => {
-        if (theme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-        }
-        localStorage.setItem('theme', theme);
-    };
-
-    // Apply on load
-    applyTheme(getPreferredTheme());
-
-    // Toggle on click
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            applyTheme(current === 'light' ? 'dark' : 'light');
+        // Close menu on link click
+        navLinksContainer.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (menuOpen) {
+                    menuOpen = false;
+                    navLinksContainer.style = '';
+                    if (navCta) navCta.style = '';
+                    menuBtn.innerHTML = '<i class="ph ph-list"></i>';
+                }
+            });
         });
     }
-
-    // Listen for OS theme changes
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            applyTheme(e.matches ? 'light' : 'dark');
-        }
-    });
 });
