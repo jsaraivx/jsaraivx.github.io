@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,604 +7,555 @@
 
     <!-- SEO -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.png">
     <title>João Saraiva — Data Engineer</title>
     <meta name="description"
-        content="Engenheiro de Dados focado em pipelines escaláveis, arquitetura de dados e governança. Experiência em modernização de fluxos críticos para clientes globais na Avdata Consulting.">
-    <meta name="keywords"
-        content="Data Engineer, Engenheiro de Dados, GCP, BigQuery, Airflow, Kafka, Python, dbt, Power BI, DAX, Looker, Arquitetura Medalhão, Pipeline de Dados, Data Quality, Data Governance">
-    <meta name="author" content="João Saraiva">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="João Saraiva — Data Engineer">
-    <meta property="og:description"
-        content="Pipelines escaláveis, arquitetura de dados moderna e governança. Atendendo clientes globais.">
-    <meta property="og:type" content="website">
+        content="Data & Software Engineer specializing in scalable cloud-native architectures on AWS/GCP. Expert in high-volume ETL/ELT pipelines, Lakehouse optimization, and LLMops. Proven track record in reducing operational costs (FinOps) and latency across global-scale data infrastructure.">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- GSAP + ScrollTrigger + Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
     <!-- Background -->
-    <div class="glow-effect"></div>
     <div class="grid-background"></div>
 
     <!-- Navigation -->
     <header id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <span class="logo-text">João Saraiva<span class="logo-highlight">.data()</span></span>
+                <span class="logo-text">JSARAIVA<span class="logo-highlight">.DATA</span></span>
             </a>
             <nav class="nav-links">
-                <a href="#about" class="nav-link">Sobre</a>
-                <a href="#experience" class="nav-link">Experiência</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Stack</a>
-                <a href="#projects" class="nav-link">Projetos</a>
-                <a href="#certifications" class="nav-link">Certificações</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
             </nav>
             <div class="nav-cta">
-                <a href="#contact" class="btn btn-primary">Contato <i class="ph ph-arrow-right"></i></a>
+                <a href="mailto:joaogabrielssaraiva@gmail.com" class="btn btn-outline-accent">Contact</a>
             </div>
-
-            <!-- Theme Toggle -->
-            <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
-                <i class="ph ph-sun" id="theme-icon-light"></i>
-                <i class="ph ph-moon" id="theme-icon-dark"></i>
-            </button>
-
             <button class="menu-btn" aria-label="Menu">
                 <i class="ph ph-list"></i>
             </button>
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#skills" class="mobile-link">Stack</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#certifications" class="mobile-link">Certs</a>
+            <a href="mailto:joaogabrielssaraiva@gmail.com" class="btn btn-primary">Contact</a>
+        </nav>
+    </div>
+
     <main>
         <!-- ===== HERO ===== -->
         <section id="hero" class="hero-section">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <div class="hero-badge">
-                        <span class="badge-dot"></span>
-                        Disponível para projetos <!-- — modelo PJ -->
-                    </div>
-                    <h1 class="hero-title">
-                        Engenheiro de Dados <em class="text-gradient">que entrega infraestrutura, não só query.</em>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Projeto e mantenho pipelines escaláveis, modelo arquiteturas de dados modernas e aplico
-                        governança rigorosa — para que times de Analytics tomem decisões com dados que confiam.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            Ver Projetos <i class="ph ph-arrow-down-right"></i>
-                        </a>
-                        <a href="mailto:joaogabrielssaraiva@gmail.com" class="btn btn-secondary">
-                            Entrar em Contato <i class="ph ph-envelope-simple"></i>
-                        </a>
-                        <!-- Botão desabilitado para uso futuro
-                        <a href="/curriculo.pdf" target="_blank" class="btn btn-secondary">
-                            Curriculum Vitae <i class="ph ph-arrow-up-right"></i>
-                        </a>
-                        -->
-                    </div>
+            <div class="container" style="text-align: center;">
+                <div class="hero-badge"
+                    style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid var(--border-light); padding: 0.5rem 1rem; border-radius: 100px; margin-bottom: 2rem; color: var(--text-dark-secondary);">
+                    <span style="width: 6px; height: 6px; background: #22c55e; border-radius: 50%;"></span>
+                    Available for projects
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <a href="#about"><i class="ph ph-caret-down"></i></a>
+                <h1 class="hero-title">
+                    Data Engineer <em>who delivers infrastructure, not just queries.</em>
+                </h1>
+                <p class="hero-subtitle">
+                    I design and maintain scalable pipelines, architect modern data platforms on AWS & GCP, and enforce
+                    rigorous governance — so Analytics teams make decisions with data they trust.
+                </p>
+                <div class="hero-actions" style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="mailto:joaogabrielssaraiva@gmail.com" class="btn btn-outline-accent">Get in Touch</a>
+                </div>
             </div>
         </section>
 
-        <!-- ===== ABOUT ===== -->
+        <!-- ===== ABOUT — Statement ===== -->
         <section id="about" class="about-section">
             <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">Sobre</h2>
-                    <div class="title-line"></div>
+                <div class="about-statement">
+                    <p class="section-title">About</p>
+                    <p class="statement-text">
+                        My edge is combining <strong>Software Engineering rigor</strong> with <strong>Data Engineering
+                            scalability.</strong> I lead global technical projects, architecting platforms to ensure
+                        <strong>resilient orchestration,</strong> high availability, and cost efficiency.
+                    </p>
                 </div>
-                <div class="about-content reveal">
+
+                <div class="about-details">
                     <div class="about-text">
                         <p>
-                            Meu diferencial é unir a <strong>rigorosidade da Engenharia de Software</strong> à <strong>escalabilidade da Engenharia de Dados</strong>. Atuo na liderança técnica de projetos globais, onde meu foco vai além da construção de pipelines: eu projeto a arquitetura da plataforma para garantir orquestração resiliente, alta disponibilidade e eficiência de custos (FinOps).
-                        </p>
-                        <p>
-                            Acredito que a Engenharia de Dados é a fundação para a IA moderna. Recentemente, liderei a modernização da arquitetura de agentes de uma Startup SaaS Global, onde <strong>reduzi a latência de extração em 75%</strong> ao consolidar pipelines fragmentados em uma arquitetura de <em>Single Structured-Output</em> com RAG estruturado.
+                            I believe Data Engineering is the foundation for modern AI. Recently, I led the
+                            modernization of an AI agent architecture for a Global SaaS Startup, where I <strong>reduced
+                                extraction latency by 75%</strong> by consolidating fragmented pipelines into a
+                            <em>Single Structured-Output</em> architecture with structured RAG.
                         </p>
                         <ul class="about-highlights">
-                            <li><i class="ph ph-minus"></i> <strong>Engenharia & Platform:</strong> Especialista em ecossistemas GCP e Databricks de alta volumetria.</li>
-                            <li><i class="ph ph-minus"></i> <strong>Orquestração:</strong> Implementação de ambientes Airflow em Kubernetes/Docker em escala global.</li>
-                            <li><i class="ph ph-minus"></i> <strong>Processamento:</strong> Pipelines escaláveis com PySpark para integração Kafka ↔ BigQuery.</li>
-                            <li><i class="ph ph-minus"></i> <strong>LLMops & AI:</strong> Injeção dinâmica de metadados (>15K tokens) para resolução de entidades em tempo real.</li>
-                            <li><i class="ph ph-minus"></i> <strong>Qualidade:</strong> Observabilidade via fail-fast checks e testes unitários como padrão de entrega.</li>
+                            <li><i class="ph ph-minus" style="margin-top: 0.3rem; opacity: 0.3;"></i>
+                                <span><strong>Engineering & Platform:</strong> Specialist in high-volume GCP and AWS
+                                    ecosystems with Databricks.</span></li>
+                            <li><i class="ph ph-minus" style="margin-top: 0.3rem; opacity: 0.3;"></i>
+                                <span><strong>Orchestration:</strong> Airflow (MWAA/Composer) in Kubernetes/Docker at
+                                    global scale.</span></li>
+                            <li><i class="ph ph-minus" style="margin-top: 0.3rem; opacity: 0.3;"></i>
+                                <span><strong>Processing:</strong> Scalable ETL/ELT pipelines with PySpark for Kafka ↔
+                                    BigQuery/Redshift integration.</span></li>
+                            <li><i class="ph ph-minus" style="margin-top: 0.3rem; opacity: 0.3;"></i>
+                                <span><strong>LLMops & AI:</strong> Dynamic metadata injection (>15K tokens) for
+                                    real-time entity resolution.</span></li>
+                            <li><i class="ph ph-minus" style="margin-top: 0.3rem; opacity: 0.3;"></i>
+                                <span><strong>Quality:</strong> Observability via fail-fast checks and unit tests as
+                                    delivery standard.</span></li>
                         </ul>
                     </div>
                     <div class="about-visual">
-                        <div class="about-profile-card glass-panel">
-                            <img src="https://github.com/jsaraivx.png" alt="João Saraiva" class="profile-photo"
-                                width="96" height="96" loading="lazy">
-                            <p class="byline-name">João Saraiva</p>
-                            <p class="byline-role">Data Engineer · Avdata Consulting</p>
-                            <div class="profile-stat">
-                                <span class="exp-number">4+</span>
-                                <span class="exp-text">Anos unindo software e<br>arquiteturas de dados</span>
+                        <div class="about-profile-card">
+                            <img src="https://github.com/jsaraivx.png" alt="João Saraiva"
+                                style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">João Saraiva</h3>
+                            <p
+                                style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dark-secondary); margin-bottom: 2rem;">
+                                Data Engineer · Avdata Consulting</p>
+                            <div style="border-top: 1px solid var(--border-light); padding-top: 2rem;">
+                                <span
+                                    style="font-size: 3rem; font-weight: 700; display: block; line-height: 1;">4+</span>
+                                <span style="font-size: 0.8rem; color: var(--text-dark-secondary);">Years bridging
+                                    software and data architectures</span>
                             </div>
                         </div>
+                        <div class="github-graph" style="margin-top: 2rem; text-align: center;">
+                            <img src="https://ghchart.rshah.org/jsaraivx" alt="GitHub contributions"
+                                style="width: 100%; filter: grayscale(1); opacity: 0.6;">
+                            <p
+                                style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 1rem; color: var(--text-dark-secondary);">
+                                github.com/jsaraivx</p>
+                        </div>
                     </div>
-                </div>
-                <!-- GitHub Activity -->
-                <div class="github-graph reveal">
-                    <a href="https://github.com/jsaraivx" target="_blank" aria-label="Ver perfil no GitHub">
-                        <img src="https://ghchart.rshah.org/jsaraivx" alt="Contribuições GitHub" class="github-chart"
-                            loading="lazy">
-                    </a>
-                    <p class="github-graph-label"><i class="ph ph-github-logo"></i> github.com/jsaraivx</p>
                 </div>
             </div>
         </section>
 
         <!-- ===== EXPERIENCE ===== -->
-        <section id="experience" class="experience-section">
+        <section id="experience" class="experience-section section-dark">
             <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">Experiência</h2>
-                    <div class="title-line"></div>
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
                 </div>
-                <div class="experience-timeline reveal">
-                    <!-- Avdata Grouped (Progression) -->
-                    <div class="exp-group glass-panel">
-                        <div class="exp-group-header">
-                            <div class="company-logo-box">
-                                <i class="ph ph-buildings"></i>
-                            </div>
+                <div class="experience-timeline" style="display: flex; flex-direction: column; gap: 2rem;">
+
+                    <!-- Avdata -->
+                    <div class="exp-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <h3>Avdata Consultoria LTDA</h3>
-                                <p class="exp-company">Total: 1 ano 8 meses · Remoto</p>
+                                <p class="section-title" style="margin-bottom: 0.5rem;">Sep 2024 — Present</p>
+                                <h3 class="project-title">Data Engineer</h3>
+                                <p class="project-subtitle">Avdata Consultoria LTDA · Remote</p>
                             </div>
                         </div>
-                        
-                        <div class="exp-sub-items">
-                            <!-- Avdata DE -->
-                            <div class="exp-sub-item">
-                                <div class="role-dot"></div>
-                                <div class="exp-item-header">
-                                    <div>
-                                        <h3>Engenheiro de Dados</h3>
-                                    </div>
-                                    <span class="exp-date">Jun 2025 — Presente</span>
-                                </div>
-                                <ul class="exp-list">
-                                    <li><strong>Infraestrutura Internacional:</strong> Reduzi em 80% o tempo de intervenções manuais ao implementar uma malha de reconciliação em lote (Airflow/Kubernetes) para rotinas de Upsert globais.</li>
-                                    <li><strong>Automação & Arquitetura:</strong> Estabilizei custos de nuvem (FinOps) e destravei o consumo analítico orquestrando a conexão Kafka ↔ BigQuery via DAG Generators customizados.</li>
-                                    <li><strong>Liderança Técnica:</strong> Garanti alta disponibilidade e governança de pipelines liderando times distribuídos sob padrões enterprise de entrega.</li>
-                                </ul>
-                                <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: GCP, Spark, Databricks, Airflow, BigQuery, Kubernetes, Kafka, Python.</p>
-                            </div>
-
-                            <!-- Avdata DA -->
-                            <div class="exp-sub-item">
-                                <div class="role-dot"></div>
-                                <div class="exp-item-header">
-                                    <div>
-                                        <h3>Analista de Dados</h3>
-                                    </div>
-                                    <span class="exp-date">Set 2024 — Mai 2025</span>
-                                </div>
-                                <ul class="exp-list">
-                                    <li><strong>Analytics Engineering:</strong> Habilitei o acompanhamento de métricas internacionais ao arquitetar o ciclo completo de dados, da ingestão RAW à estruturação de Data Marts no BigQuery.</li>
-                                    <li><strong>BI Estratégico:</strong> Aumentei a precisão na tomada de decisão de lideranças globais através de modelagem dimensional Star Schema e cálculos complexos em DAX no Power BI.</li>
-                                </ul>
-                                <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: BigQuery, SQL Avançado, Power BI, DAX, Modelagem Dimensional.</p>
-                            </div>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; color: var(--text-light-secondary); line-height: 1.65;">
+                            <li>Accelerated pipeline deployment by <strong>80%</strong> by developing a metadata-driven
+                                DAG generation system for Apache Airflow (MWAA/GKE), automating complex backfills across
+                                global data sources.</li>
+                            <li>Achieved <strong>zero data loss</strong> during streaming outages by designing a
+                                high-performance resilience layer using DuckDB and S3-compatible storage to recover 100%
+                                of events into the Data Warehouse.</li>
+                            <li>Reduced AI agent latency by <strong>86%</strong> (6s → 0.8s) by optimizing production
+                                architectures with FastAPI and async Python for global SaaS clients.</li>
+                            <li>Stabilized cloud costs (FinOps) and unlocked analytical consumption by orchestrating
+                                Kafka ↔ BigQuery integration via custom DAG Generators.</li>
+                            <li>Enabled international metrics tracking by architecting the full data cycle — from RAW
+                                ingestion to structured Data Marts in BigQuery — unlocking executive-level analytics.</li>
+                            <li>Increased global leadership decision accuracy by implementing Star Schema dimensional
+                                modeling and complex DAX calculations in Power BI.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">GCP</span><span class="tag">AWS</span><span
+                                class="tag">PySpark</span><span class="tag">Databricks</span><span
+                                class="tag">Airflow</span><span class="tag">Kubernetes</span><span
+                                class="tag">Kafka</span><span class="tag">Python</span><span
+                                class="tag">BigQuery</span><span class="tag">Power BI</span><span
+                                class="tag">DAX</span>
                         </div>
                     </div>
 
                     <!-- Tropical Bud -->
-                    <div class="exp-item glass-panel">
-                        <div class="exp-item-header">
+                    <div class="exp-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <h3>Software Developer (Freelance)</h3>
-                                <p class="exp-company">Tropical Bud · Portugal (Remoto)</p>
+                                <p class="section-title" style="margin-bottom: 0.5rem;">Nov 2024 — Sep 2025</p>
+                                <h3 class="project-title">Software Developer (Freelance)</h3>
+                                <p class="project-subtitle">Tropical Bud · Portugal (Remote)</p>
                             </div>
-                            <span class="exp-date">Nov 2024 — Set 2025</span>
                         </div>
-                        <ul class="exp-list">
-                            <li><strong>Desenvolvimento E-commerce:</strong> Acelerei o ciclo de vendas na expansão europeia ao desenvolver scripts Liquid customizados e integrações avançadas na plataforma Shopify.</li>
-                            <li><strong>Visibilidade de Operação:</strong> Forneci centralização de KPIs comerciais conectando o backend da loja à engenharia de dados para criação de dashboards de performance.</li>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; color: var(--text-light-secondary); line-height: 1.65;">
+                            <li>Accelerated the European expansion sales cycle by developing custom Liquid scripts and
+                                advanced Shopify platform integrations.</li>
+                            <li>Centralized commercial KPI visibility by connecting the store backend to data
+                                engineering pipelines for performance dashboard creation.</li>
                         </ul>
-                        <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: Shopify, Liquid, JavaScript, HTML, Analytics.</p>
+                        <div class="tag-list">
+                            <span class="tag">Shopify</span><span class="tag">Liquid</span><span
+                                class="tag">JavaScript</span><span class="tag">HTML</span><span
+                                class="tag">Analytics</span>
+                        </div>
                     </div>
 
                     <!-- Ultraform -->
-                    <div class="exp-item glass-panel">
-                        <div class="exp-item-header">
+                    <div class="exp-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <h3>Sócio-Fundador | Engenheiro de Software</h3>
-                                <p class="exp-company">Ultraform Suplementos · Autônomo</p>
+                                <p class="section-title" style="margin-bottom: 0.5rem;">Aug 2023 — Jul 2024</p>
+                                <h3 class="project-title">Co-Founder | Software Engineer</h3>
+                                <p class="project-subtitle">Ultraform Supplements</p>
                             </div>
-                            <span class="exp-date">Ago 2023 — Jul 2024</span>
                         </div>
-                        <ul class="exp-list">
-                            <li><strong>Arquitetura Digital:</strong> Viabilizei o lançamento da marca desenvolvendo a infraestrutura tecnológica end-to-end, da modelagem do banco de dados à integração de fluxos logísticos.</li>
-                            <li><strong>Sistemas & Operações:</strong> Centralizei a gestão de estoque de múltiplas contas de Marketplace via implantação integral e parametrização do ERP Bling.</li>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; color: var(--text-light-secondary); line-height: 1.65;">
+                            <li>Enabled brand launch by developing end-to-end tech infrastructure — from database
+                                modeling to logistics flow integration via ERP Bling.</li>
+                            <li>Centralized multi-marketplace inventory management by fully deploying and parameterizing
+                                the ERP Bling system across multiple seller accounts.</li>
                         </ul>
-                        <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: Arquitetura de Sistemas, APIs, Shopify, ERP Bling, Power BI.</p>
+                        <div class="tag-list">
+                            <span class="tag">Systems Architecture</span><span class="tag">APIs</span><span
+                                class="tag">Shopify</span><span class="tag">ERP Bling</span><span class="tag">Power
+                                BI</span>
+                        </div>
                     </div>
 
-                    <!-- Freelance -->
-                    <div class="exp-item glass-panel">
-                        <div class="exp-item-header">
+                    <!-- Consultoria Independente -->
+                    <div class="exp-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.5rem;">
                             <div>
-                                <h3>Engenheiro de Software & Dados</h3>
-                                <p class="exp-company">Consultoria Independente · Freelance</p>
+                                <p class="section-title" style="margin-bottom: 0.5rem;">Nov 2021 — May 2024</p>
+                                <h3 class="project-title">Software & Data Engineer</h3>
+                                <p class="project-subtitle">Independent Consulting · Freelance</p>
                             </div>
-                            <span class="exp-date">Nov 2021 — Mai 2024</span>
                         </div>
-                        <ul class="exp-list">
-                            <li><strong>Automação Python:</strong> Reduzi o esforço braçal de uma equipe de 100+ vendedores construindo bots escaláveis para gestão de anúncios em marketplaces via APIs.</li>
-                            <li><strong>Inteligência de Mercado:</strong> Estruturei bases de dados a partir de fontes não padronizadas desenvolvendo rotinas robustas de Web Scraping e higienização de logs.</li>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; color: var(--text-light-secondary); line-height: 1.65;">
+                            <li>Reduced manual workload for a 100+ salesperson team by building scalable Python bots for
+                                marketplace ad management via REST APIs.</li>
+                            <li>Structured market intelligence databases from non-standardized sources by developing
+                                robust Web Scraping routines and log sanitization pipelines.</li>
                         </ul>
-                        <p class="exp-company" style="margin-top: 1rem; font-size: 0.7rem;">Stack: Python, REST APIs, Web Scraping, SQL, Full-stack Dev.</p>
+                        <div class="tag-list">
+                            <span class="tag">Python</span><span class="tag">REST APIs</span><span class="tag">Web
+                                Scraping</span><span class="tag">SQL</span><span class="tag">Full-stack</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- ===== SKILLS ===== -->
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">Tech Stack</h2>
-                    <div class="title-line"></div>
+        <!-- ===== SKILLS — Pinned ===== -->
+        <section id="skills" class="skills-pinned">
+            <div class="skills-pinned-track">
+                <div class="skill-category">
+                    <p class="section-title">01 / Cloud</p>
+                    <h3>Cloud Platforms</h3>
+                    <div class="tag-list">
+                        <span class="tag">Google BigQuery</span>
+                        <span class="tag">Google Cloud Storage (GCS)</span>
+                        <span class="tag">Google Cloud Composer</span>
+                        <span class="tag">Google Pub/Sub</span>
+                        <span class="tag">Google Dataflow</span>
+                        <span class="tag">Google Data Transfer API</span>
+                        <span class="tag">AWS Glue</span>
+                        <span class="tag">Amazon S3</span>
+                        <span class="tag">Amazon Redshift</span>
+                        <span class="tag">Amazon Athena</span>
+                        <span class="tag">AWS Lambda</span>
+                        <span class="tag">Amazon Kinesis</span>
+                        <span class="tag">AWS Step Functions</span>
+                        <span class="tag">Amazon MWAA (Airflow)</span>
+                    </div>
                 </div>
-                <div class="skills-grid reveal">
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-cloud skill-icon"></i>
-                        <h3>Google Cloud Platform</h3>
-                        <div class="tag-list">
-                            <span class="tag">BigQuery</span>
-                            <span class="tag">Cloud Storage (GCS)</span>
-                            <span class="tag">Cloud Composer</span>
-                            <span class="tag">Pub/Sub</span>
-                            <span class="tag">Dataflow</span>
-                            <span class="tag">Data Transfer API</span>
-                        </div>
+                <div class="skill-category">
+                    <p class="section-title">02 / Orchestration</p>
+                    <h3>Orchestration & Streaming</h3>
+                    <div class="tag-list">
+                        <span class="tag">Apache Airflow (Astro)</span>
+                        <span class="tag">Apache Kafka (KRaft)</span>
+                        <span class="tag">ksqlDB</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Docker Compose</span>
                     </div>
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-flow-arrow skill-icon"></i>
-                        <h3>Orquestração & Streaming</h3>
-                        <div class="tag-list">
-                            <span class="tag">Apache Airflow (Astro)</span>
-                            <span class="tag">Apache Kafka (KRaft)</span>
-                            <span class="tag">ksqlDB</span>
-                            <span class="tag">Docker & Docker Compose</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <p class="section-title">03 / Compute</p>
+                    <h3>Python & Data</h3>
+                    <div class="tag-list">
+                        <span class="tag">Python 3.10+</span>
+                        <span class="tag">Advanced SQL</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">dbt (Data Build Tool)</span>
+                        <span class="tag">Apache PySpark</span>
+                        <span class="tag">Databricks</span>
+                        <span class="tag">FastAPI</span>
                     </div>
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-database skill-icon"></i>
-                        <h3>Python & Dados</h3>
-                        <div class="tag-list">
-                            <span class="tag">Python 3.10+</span>
-                            <span class="tag">SQL Avançado</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">dbt (Data Build Tool)</span>
-                            <span class="tag">PySpark</span>
-                            <span class="tag">Databricks</span>
-                            <span class="tag">FastAPI</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <p class="section-title">04 / AI</p>
+                    <h3>AI Engineering</h3>
+                    <div class="tag-list">
+                        <span class="tag">RAG Pipelines</span>
+                        <span class="tag">pgvector</span>
+                        <span class="tag">Google Gemini API</span>
+                        <span class="tag">sentence-transformers</span>
+                        <span class="tag">Semantic Chunking</span>
+                        <span class="tag">PyMuPDF</span>
                     </div>
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-brain skill-icon"></i>
-                        <h3>AI Engineering</h3>
-                        <div class="tag-list">
-                            <span class="tag">RAG Pipelines</span>
-                            <span class="tag">pgvector</span>
-                            <span class="tag">Google Gemini API</span>
-                            <span class="tag">sentence-transformers</span>
-                            <span class="tag">Semantic Chunking</span>
-                            <span class="tag">PyMuPDF</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <p class="section-title">05 / BI</p>
+                    <h3>Visualization & BI</h3>
+                    <div class="tag-list">
+                        <span class="tag">Microsoft Power BI (DAX)</span>
+                        <span class="tag">Dimensional Modeling</span>
+                        <span class="tag">Workspace Governance</span>
+                        <span class="tag">Google Looker</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Plotly</span>
                     </div>
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-chart-bar skill-icon"></i>
-                        <h3>Visualização & BI</h3>
-                        <div class="tag-list">
-                            <span class="tag">Power BI (DAX)</span>
-                            <span class="tag">Modelagem Dimensional</span>
-                            <span class="tag">Governança de Workspaces</span>
-                            <span class="tag">Looker</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">Plotly</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <p class="section-title">06 / Software</p>
+                    <h3>Software Engineering</h3>
+                    <div class="tag-list">
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">CI/CD (GitHub Actions)</span>
+                        <span class="tag">Pytest</span>
+                        <span class="tag">Pydantic</span>
+                        <span class="tag">SQLAlchemy</span>
+                        <span class="tag">HashiCorp Terraform (IaC)</span>
+                        <span class="tag">Scrum / Kanban</span>
                     </div>
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-git-branch skill-icon"></i>
-                        <h3>Engenharia de Software</h3>
-                        <div class="tag-list">
-                            <span class="tag">Git & GitHub</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">Pytest</span>
-                            <span class="tag">Pydantic</span>
-                            <span class="tag">SQLAlchemy</span>
-                            <span class="tag">Terraform (IaC)</span>
-                            <span class="tag">Scrum / Kanban</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <p class="section-title">07 / Architecture</p>
+                    <h3>Architecture & Modeling</h3>
+                    <div class="tag-list">
+                        <span class="tag">Medallion (Bronze/Silver/Gold)</span>
+                        <span class="tag">Star & Snowflake Schema</span>
+                        <span class="tag">Data Warehouse</span>
+                        <span class="tag">Data Lakehouse</span>
+                        <span class="tag">Kappa Architecture</span>
+                        <span class="tag">Data Mesh (concepts)</span>
+                        <span class="tag">FinOps</span>
                     </div>
-                    <div class="skill-category glass-panel">
-                        <i class="ph ph-compass-tool skill-icon"></i>
-                        <h3>Arquitetura & Modelagem</h3>
-                        <div class="tag-list">
-                            <span class="tag">Medalhão (Bronze/Silver/Gold)</span>
-                            <span class="tag">Star & Snowflake Schema</span>
-                            <span class="tag">Data Warehouse</span>
-                            <span class="tag">Data Lakehouse</span>
-                            <span class="tag">Kappa Architecture</span>
-                            <span class="tag">Data Mesh (conceitos)</span>
-                            <span class="tag">FinOps</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <p class="section-title">08 / Infra</p>
+                    <h3>Infrastructure</h3>
+                    <div class="tag-list">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes (AWS EKS / Google GKE)</span>
+                        <span class="tag">Helm</span>
+                        <span class="tag">CI/CD (GitHub Actions)</span>
+                        <span class="tag">HashiCorp Terraform</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== PROJECTS ===== -->
-        <section id="projects" class="projects-section">
+        <section id="projects" class="projects-section section-dark">
             <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">Projetos</h2>
-                    <div class="title-line"></div>
+                <div class="section-header">
+                    <h2 class="section-title">Selected Projects</h2>
                 </div>
-                <div class="projects-grid reveal">
+                <div class="projects-grid">
+
                     <!-- VectorHire -->
-                    <div class="project-card glass-panel">
-                        <div class="project-icon">
-                            <i class="ph ph-robot"></i>
-                        </div>
+                    <div class="proj-card">
                         <h3 class="project-title">VectorHire</h3>
-                        <p class="project-subtitle">ATS inteligente com RAG Pipeline</p>
-                        <p class="project-desc">
-                            Sistema completo de recrutamento que cruza currículos com vagas usando
-                            <strong>Retrieval-Augmented Generation</strong>. Extrai PDFs com PyMuPDF, fatia com Semantic
-                            Chunking, vetoriza localmente com sentence-transformers e busca similaridade via PostgreSQL
-                            + pgvector. O Gemini 2.5 Flash gera pareceres estruturados (Pydantic) para cada candidato.
-                            API assíncrona com FastAPI, persistência via SQLAlchemy (Repository Pattern) e frontend
-                            desacoplado.
-                        </p>
-                        <div class="tag-list project-tech">
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">pgvector</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">Gemini API</span>
-                            <span class="tag">sentence-transformers</span>
-                            <span class="tag">PyMuPDF</span>
-                            <span class="tag">Pydantic</span>
-                            <span class="tag">SQLAlchemy</span>
+                        <p class="project-subtitle">Intelligent ATS with RAG Pipeline</p>
+                        <p class="project-desc">End-to-end recruitment system that cross-matches resumes with job
+                            postings using Retrieval-Augmented Generation. Extracts PDFs with PyMuPDF, applies Semantic
+                            Chunking, vectorizes locally with sentence-transformers, and searches similarity via
+                            PostgreSQL + pgvector. Gemini 2.5 Flash generates structured assessments (Pydantic). Async
+                            API with FastAPI, persistence via SQLAlchemy (Repository Pattern).</p>
+                        <div class="tag-list" style="margin-top: auto; padding-top: 1.5rem;">
+                            <span class="tag">FastAPI</span><span class="tag">pgvector</span><span
+                                class="tag">RAG</span><span class="tag">Gemini API</span><span
+                                class="tag">sentence-transformers</span><span class="tag">PyMuPDF</span><span
+                                class="tag">Pydantic</span><span class="tag">SQLAlchemy</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jsaraivx/vectorhire" class="btn btn-outline-accent"
-                                target="_blank"><i class="ph ph-github-logo"></i>
-                                Repositório</a>
-                        </div>
+                        <a href="https://github.com/jsaraivx/vectorhire" target="_blank"
+                            style="margin-top: 1.5rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Repository
+                            <i class="ph ph-arrow-up-right"></i></a>
                     </div>
 
-                    <!-- AI Architecture & LLMops -->
-                    <div class="project-card glass-panel">
-                        <div class="project-icon">
-                            <i class="ph ph-cpu"></i>
-                        </div>
+                    <!-- AI Architecture -->
+                    <div class="proj-card">
                         <h3 class="project-title">AI Architecture & LLMops</h3>
-                        <p class="project-subtitle">Modernização & Structured Output</p>
-                        <p class="project-desc">
-                            Reengenharia de um ecossistema de agentes de IA focada na consolidação de modelos para ganho
-                            de performance e redução de débito técnico. Migração de pipelines sequenciais para
-                            arquitetura de <strong>Single Structured-Output</strong>, reduzindo a latência de
-                            "cold-cache" em 75%. Implementação de RAG Estruturado com injeção dinâmica de metadados em
-                            janelas de contexto superiores a 15K tokens e validações rígidas via JSON Schema.
-                        </p>
-                        <div class="tag-list project-tech">
-                            <span class="tag">LLMops</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">Function Calling</span>
-                            <span class="tag">JSON Schema</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Claude Code</span>
+                        <p class="project-subtitle">Modernization & Structured Output</p>
+                        <p class="project-desc">Re-engineered an AI agent ecosystem focused on model consolidation for
+                            performance gains and tech debt reduction. Migrated sequential pipelines to a Single
+                            Structured-Output architecture, reducing "cold-cache" latency by 75%. Implemented Structured
+                            RAG with dynamic metadata injection in context windows exceeding 15K tokens and strict JSON
+                            Schema validations.</p>
+                        <div class="tag-list" style="margin-top: auto; padding-top: 1.5rem;">
+                            <span class="tag">LLMops</span><span class="tag">RAG</span><span class="tag">Function
+                                Calling</span><span class="tag">JSON Schema</span><span class="tag">Docker</span><span
+                                class="tag">Claude Code</span>
                         </div>
-                        <div class="project-links">
-                            <span class="btn btn-secondary" style="cursor: default; border: none;">
-                                <i class="ph ph-lock"></i> Projeto Profissional
-                            </span>
-                        </div>
+                        <span
+                            style="margin-top: 1rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.4;">Professional
+                            Project</span>
                     </div>
 
                     <!-- Global Data Orchestration -->
-                    <div class="project-card glass-panel">
-                        <div class="project-icon">
-                            <i class="ph ph-flow-arrow"></i>
-                        </div>
+                    <div class="proj-card">
                         <h3 class="project-title">Global Data Orchestration</h3>
-                        <p class="project-subtitle">Resiliência em Escala Global</p>
-                        <p class="project-desc">
-                            Implementação de resiliência de dados para uma Startup SaaS Global. Projetei um sistema de
-                            <strong>backfill automatizado</strong> utilizando Apache Airflow em Kubernetes (GKE),
-                            reduzindo em 80% o esforço manual com intervenções técnicas. Estabeleci uma malha de
-                            reconciliação em lote como contingência para falhas no fluxo contínuo do Kafka, garantindo a
-                            integridade de 100% dos dados processados.
-                        </p>
-                        <div class="tag-list project-tech">
-                            <span class="tag">Apache Airflow</span>
-                            <span class="tag">GCP</span>
-                            <span class="tag">Kubernetes (GKE)</span>
-                            <span class="tag">Kafka</span>
-                            <span class="tag">Data Resilience</span>
-                            <span class="tag">Backfill</span>
+                        <p class="project-subtitle">Resilience at Global Scale</p>
+                        <p class="project-desc">Implemented data resilience for a Global SaaS Startup. Designed an
+                            automated backfill system using Apache Airflow on Kubernetes (GKE), reducing manual
+                            technical interventions by 80%. Established a batch reconciliation mesh as contingency for
+                            continuous Kafka flow failures, ensuring 100% data integrity.</p>
+                        <div class="tag-list" style="margin-top: auto; padding-top: 1.5rem;">
+                            <span class="tag">Apache Airflow</span><span class="tag">GCP</span><span
+                                class="tag">Kubernetes (GKE)</span><span class="tag">Kafka</span><span class="tag">Data
+                                Resilience</span><span class="tag">Backfill</span>
                         </div>
-                        <div class="project-links">
-                            <span class="btn btn-secondary" style="cursor: default; border: none;">
-                                <i class="ph ph-lock"></i> Projeto Profissional
-                            </span>
-                        </div>
+                        <span
+                            style="margin-top: 1rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.4;">Professional
+                            Project</span>
                     </div>
 
                     <!-- Stream-Guard -->
-                    <div class="project-card glass-panel">
-                        <div class="project-icon">
-                            <i class="ph ph-shield-check"></i>
-                        </div>
+                    <div class="proj-card">
                         <h3 class="project-title">Stream-Guard-Kafka</h3>
-                        <p class="project-subtitle">Detecção de fraudes em tempo real</p>
-                        <p class="project-desc">
-                            Pipeline de <strong>Arquitetura Kappa</strong> com processamento híbrido: ksqlDB aplica
-                            Tumbling Windows para detectar alta velocidade transacional, enquanto Python processa regras
-                            de negócio complexas (blacklist, contexto). Kafka 3.6 em KRaft mode (sem ZooKeeper), dados
-                            sintéticos realistas via Faker, contratos tipados com Pydantic e persistência em PostgreSQL
-                            via SQLAlchemy. Infraestrutura inteira orquestrada com Docker Compose.
-                        </p>
-                        <div class="tag-list project-tech">
-                            <span class="tag">Kafka 3.6 (KRaft)</span>
-                            <span class="tag">ksqlDB</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Docker Compose</span>
-                            <span class="tag">Pydantic</span>
-                            <span class="tag">SQLAlchemy</span>
-                            <span class="tag">Faker</span>
+                        <p class="project-subtitle">Real-time Fraud Detection</p>
+                        <p class="project-desc">Kappa Architecture pipeline with hybrid processing: ksqlDB applies
+                            Tumbling Windows for high-speed transactional anomaly detection, while Python processes
+                            complex business rules (blacklist, context). Kafka 3.6 in KRaft mode (no ZooKeeper),
+                            realistic synthetic data via Faker, typed contracts with Pydantic, and PostgreSQL
+                            persistence via SQLAlchemy. Fully orchestrated with Docker Compose.</p>
+                        <div class="tag-list" style="margin-top: auto; padding-top: 1.5rem;">
+                            <span class="tag">Kafka 3.6 (KRaft)</span><span class="tag">ksqlDB</span><span
+                                class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Docker
+                                Compose</span><span class="tag">Pydantic</span><span class="tag">SQLAlchemy</span><span
+                                class="tag">Faker</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jsaraivx/stream-guard-kafka" class="btn btn-outline-accent"
-                                target="_blank"><i class="ph ph-github-logo"></i>
-                                Repositório</a>
-                        </div>
+                        <a href="https://github.com/jsaraivx/stream-guard-kafka" target="_blank"
+                            style="margin-top: 1.5rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Repository
+                            <i class="ph ph-arrow-up-right"></i></a>
                     </div>
 
-                    <!-- BigQuery-Schema-Migrator -->
-                    <div class="project-card glass-panel">
-                        <div class="project-icon">
-                            <i class="ph ph-table"></i>
-                        </div>
+                    <!-- BQ Schema Migrator -->
+                    <div class="proj-card">
                         <h3 class="project-title">BQ Schema Migrator</h3>
-                        <p class="project-subtitle">Governança de schemas no BigQuery</p>
-                        <p class="project-desc">
-                            Ferramenta de migração inspirada em Flyway/Liquibase, feita para <strong>BigQuery</strong>.
-                            Cada script SQL roda exatamente uma vez, com controle de idempotência via checksums SHA256 e
-                            tabela de controle. Scripts com header <code>@scheduled</code> são deployados
-                            automaticamente como Scheduled Queries pela Data Transfer API. Suporte a placeholders
-                            (<code>${PROJECT}</code>, <code>${DATASET}</code>), auto-discovery de credenciais e testes
-                            determinísticos com Pytest.
-                        </p>
-                        <div class="tag-list project-tech">
-                            <span class="tag">GCP</span>
-                            <span class="tag">BigQuery</span>
-                            <span class="tag">Data Transfer API</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Pytest</span>
-                            <span class="tag">SHA256</span>
-                            <span class="tag">CI/CD</span>
+                        <p class="project-subtitle">BigQuery Schema Governance</p>
+                        <p class="project-desc">Migration tool inspired by Flyway/Liquibase, purpose-built for BigQuery.
+                            Each SQL script runs exactly once with idempotency control via SHA256 checksums and a
+                            control table. Scripts with @scheduled headers are auto-deployed as Scheduled Queries via
+                            the Data Transfer API. Supports placeholders (${PROJECT}, ${DATASET}), credential
+                            auto-discovery, and deterministic testing with Pytest.</p>
+                        <div class="tag-list" style="margin-top: auto; padding-top: 1.5rem;">
+                            <span class="tag">GCP</span><span class="tag">BigQuery</span><span class="tag">Data Transfer
+                                API</span><span class="tag">Python</span><span class="tag">Pytest</span><span
+                                class="tag">SHA256</span><span class="tag">CI/CD</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jsaraivx/bq-schema-migrator" class="btn btn-outline-accent"
-                                target="_blank"><i class="ph ph-github-logo"></i>
-                                Repositório</a>
-                        </div>
+                        <a href="https://github.com/jsaraivx/bq-schema-migrator" target="_blank"
+                            style="margin-top: 1.5rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Repository
+                            <i class="ph ph-arrow-up-right"></i></a>
                     </div>
 
                     <!-- What-Price -->
-                    <div class="project-card glass-panel">
-                        <div class="project-icon">
-                            <i class="ph ph-chart-line-up"></i>
-                        </div>
+                    <div class="proj-card">
                         <h3 class="project-title">What-Price</h3>
-                        <p class="project-subtitle">Pipeline ELT de mercado cripto</p>
-                        <p class="project-desc">
-                            Pipeline end-to-end que extrai dados de mercado das top 20 criptomoedas via
-                            <strong>CoinGecko API</strong> a cada hora. Orquestrado com Apache Airflow 3 (TaskFlow API +
-                            Astro), carrega em PostgreSQL Serverless (Neon) com ingestão idempotente, e expõe métricas
-                            em um dashboard Streamlit com Plotly: dominância de mercado, índice de performance,
-                            volatilidade 24h e distância do ATH. Arquitetura Bronze/Silver inspirada na Medalhão.
-                        </p>
-                        <div class="tag-list project-tech">
-                            <span class="tag">Airflow 3 (Astro)</span>
-                            <span class="tag">PostgreSQL (Neon)</span>
-                            <span class="tag">SQLAlchemy</span>
-                            <span class="tag">Streamlit</span>
-                            <span class="tag">Plotly</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Docker Compose</span>
+                        <p class="project-subtitle">Crypto Market ELT Pipeline</p>
+                        <p class="project-desc">End-to-end pipeline extracting market data from the top 20
+                            cryptocurrencies via CoinGecko API hourly. Orchestrated with Apache Airflow 3 (TaskFlow API
+                            + Astro), loads into Serverless PostgreSQL (Neon) with idempotent ingestion, and exposes
+                            metrics in a Streamlit dashboard with Plotly: market dominance, performance index, 24h
+                            volatility, and ATH distance. Bronze/Silver architecture inspired by Medallion.</p>
+                        <div class="tag-list" style="margin-top: auto; padding-top: 1.5rem;">
+                            <span class="tag">Airflow 3 (Astro)</span><span class="tag">PostgreSQL (Neon)</span><span
+                                class="tag">SQLAlchemy</span><span class="tag">Streamlit</span><span
+                                class="tag">Plotly</span><span class="tag">Pandas</span><span class="tag">Docker
+                                Compose</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jsaraivx/what-price" class="btn btn-outline-accent"
-                                target="_blank"><i class="ph ph-github-logo"></i>
-                                Repositório</a>
-                        </div>
+                        <a href="https://github.com/jsaraivx/what-price" target="_blank"
+                            style="margin-top: 1.5rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">Repository
+                            <i class="ph ph-arrow-up-right"></i></a>
                     </div>
+
                 </div>
             </div>
         </section>
 
         <!-- ===== CERTIFICATIONS ===== -->
-        <section id="certifications" class="certifications-section">
+        <section id="certifications" class="section-light">
             <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">Certificações & Formação</h2>
-                    <div class="title-line"></div>
+                <div class="section-header">
+                    <h2 class="section-title">Certifications & Education</h2>
                 </div>
-                <div class="certs-grid reveal">
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>Google Cloud Computing Foundations</h4>
-                            <p>Google · Nov 2025</p>
-                        </div>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Google Cloud Computing Foundations</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Google · Nov 2025</p>
                     </div>
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>Data Engineering with dbt</h4>
-                            <p>LinkedIn Learning · Mar 2026</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Data Engineering with dbt</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">LinkedIn Learning · Mar 2026
+                        </p>
                     </div>
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>Databricks Fundamentals</h4>
-                            <p>Academy Accreditation · Fev 2026</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Databricks Fundamentals</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Academy Accreditation · Feb
+                            2026</p>
                     </div>
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>Introduction to Apache Kafka</h4>
-                            <p>DataCamp · Fev 2026</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Introduction to Apache Kafka</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">DataCamp · Feb 2026</p>
                     </div>
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>Get Started with Databricks for Data Engineering</h4>
-                            <p>Databricks · Dez 2025</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Databricks for Data Engineering</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Databricks · Dec 2025</p>
                     </div>
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>Data Engineer Path</h4>
-                            <p>Borderless · Nov 2025</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Data Engineer Path</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Borderless · Nov 2025</p>
                     </div>
-                    <div class="cert-card glass-panel">
-                        <i class="ph ph-certificate"></i>
-                        <div class="cert-info">
-                            <h4>HackerRank SQL (Intermediate)</h4>
-                            <p>HackerRank · Out 2025</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">HackerRank SQL (Intermediate)</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">HackerRank · Oct 2025</p>
                     </div>
-                    <div class="cert-card glass-panel" style="border-left: 2px solid var(--accent);">
-                        <i class="ph ph-graduation-cap"></i>
-                        <div class="cert-info">
-                            <h4>Engenharia de Software — Bacharelado</h4>
-                            <p>UNOPAR · Previsão Jun/2027</p>
-                        </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Software Engineering — Bachelor's</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">UNOPAR · Expected Jun/2027</p>
+                    </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Claude Code in Action</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Anthropic Academy · 2026</p>
+                    </div>
+                    <div class="cert-item">
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Intro to Machine Learning with Python</h3>
+                        <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">USP / ESALQ · Mar 2026</p>
                     </div>
                 </div>
             </div>
@@ -613,31 +564,22 @@
 
     <!-- ===== FOOTER ===== -->
     <footer id="contact">
-        <div class="container">
-            <div class="footer-content reveal">
-                <div class="footer-info">
-                    <a href="https://github.com/jsaraivx" class="logo">
-                        <span class="logo-text">jsaraivx<span class="logo-highlight">.data_engineer()</span></span>
-                    </a>
-                    <p class="footer-desc">
-                        Engenheiro de Dados · Rio de Janeiro, Brasil
-                    </p>
-                    <p class="footer-desc">
-                        joaogabrielssaraiva@gmail.com
-                    </p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/jsaraivx/" class="social-link" target="_blank"
-                        aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-                    <a href="https://github.com/jsaraivx" class="social-link" target="_blank" aria-label="GitHub"><i
-                            class="ph ph-github-logo"></i></a>
-                    <a href="mailto:joaogabrielssaraiva@gmail.com" class="social-link" aria-label="Email"><i
-                            class="ph ph-envelope-simple"></i></a>
-                </div>
+        <div class="footer-content">
+            <div class="footer-info">
+                <span class="logo-text">LET'S BUILD THE <em>FUTURE</em> OF DATA</span>
+                <p style="font-size: 1.2rem; opacity: 0.6; margin-top: -2rem; margin-bottom: 2rem;">Data Engineer · Rio
+                    de Janeiro, Brazil</p>
+                <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 4rem;">joaogabrielssaraiva@gmail.com</p>
             </div>
-            <div class="footer-bottom reveal">
-                <p>&copy; 2026 João Saraiva</p>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/jsaraivx/" class="social-link" target="_blank"><i
+                        class="ph ph-linkedin-logo"></i></a>
+                <a href="https://github.com/jsaraivx" class="social-link" target="_blank"><i
+                        class="ph ph-github-logo"></i></a>
+                <a href="mailto:joaogabrielssaraiva@gmail.com" class="social-link"><i
+                        class="ph ph-envelope-simple"></i></a>
             </div>
+            <p style="font-size: 0.7rem; opacity: 0.3; margin-top: 3rem;">© 2026 João Saraiva</p>
         </div>
     </footer>
 
