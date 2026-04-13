@@ -1,6 +1,6 @@
-# jsaraivx.data() — Portfolio
+# João Saraiva.data() — Portfolio
 
-Personal portfolio site for **João Saraiva**, Data Engineer based in Rio de Janeiro, Brazil.
+Personal portfolio site for **João Saraiva**, Data & Software Engineer specializing in scalable cloud-native architectures on AWS & GCP.
 
 **Live:** [jsaraivx.github.io](https://jsaraivx.github.io)
 
@@ -9,63 +9,65 @@ Personal portfolio site for **João Saraiva**, Data Engineer based in Rio de Jan
 | Layer | Technology |
 |-------|-----------|
 | Structure | HTML5 (Semantic) |
-| Styling | Vanilla CSS (Custom Properties, CSS Variables) |
+| Styling | Vanilla CSS (Custom Properties, Grid, Flexbox) |
 | Logic | Vanilla JavaScript (ES6+) |
-| Fonts | Playfair Display, Cormorant Garamond, Inter (Google Fonts) |
-| Icons | Phosphor Icons |
+| Typography | Lay Grotesk (self-hosted, trial) |
+| Icons | Phosphor Icons (CDN) |
+| Animations | GSAP 3.12 + ScrollTrigger |
+| Smooth Scroll | Lenis 1.1 |
 | Hosting | GitHub Pages |
 
-## Design System
+## Design
 
-- **Aesthetic:** Editorial minimalism — serif typography, muted gold accent (`#c9a96e`), noise texture overlay
-- **Themes:** Dark (default) + Light mode with `localStorage` persistence and OS preference detection
-- **Typography:** Serif for display/body (Playfair Display, Cormorant Garamond), Sans-serif for UI (Inter)
-- **Animations:** Staggered hero entrance, scroll-reveal via Intersection Observer
-- **Mobile:** iOS Safe Area support (Dynamic Island / notch), responsive breakpoints at 900px and 768px
+- **Aesthetic:** Engineering minimalism — monochrome black-and-white palette, dot-grid background, alternating light/dark sections
+- **Typography:** Lay Grotesk across all weights (400–900), self-hosted `.otf` files
+- **Animations:** GSAP ScrollTrigger-powered — hero parallax, word-by-word text reveal, horizontal pinned skills scroll (desktop), staggered card entrances, smooth anchor navigation via Lenis
+- **Mobile:** Fully responsive with hamburger menu overlay, stacked layouts, and Lenis-powered smooth scroll on anchor links
 
 ## Sections
 
-- **Hero** — positioning statement + CTAs (projects, CV download)
-- **About** — career context and differentiators
-- **Experience** — professional timeline (Avdata Consulting, Freelance)
-- **Tech Stack** — 6 categories (GCP, Orchestration, Python & Data, AI Engineering, Software Engineering, Architecture)
-- **Projects** — 4 highlighted projects with tech tags (VectorHire, Stream-Guard-Kafka, BQ Schema Migrator, What-Price)
-- **Certifications** — Google Cloud, Databricks, dbt, Kafka, HackerRank + academic background
-- **Footer** — contact links (LinkedIn, GitHub, email)
+- **Hero** — positioning statement + CTAs (projects, contact)
+- **About** — career philosophy, key differentiators, profile card with GitHub contribution graph
+- **Experience** — 4 roles: Avdata Consulting (Data Engineer), Tropical Bud (Software Dev), Ultraform (Co-Founder), Independent Consulting (Software & Data Engineer)
+- **Tech Stack** — 8 horizontal-scroll categories: Cloud (GCP + AWS), Orchestration & Streaming, Python & Data, AI Engineering, Visualization & BI, Software Engineering, Architecture & Modeling, Infrastructure
+- **Projects** — 6 highlighted projects: VectorHire, AI Architecture & LLMops, Global Data Orchestration, Stream-Guard-Kafka, BQ Schema Migrator, What-Price
+- **Certifications** — 10 items: Google Cloud, Databricks, dbt, Apache Kafka, HackerRank SQL, Claude Code, ML with Python (USP), and Software Engineering bachelor's
+- **Footer** — contact links (LinkedIn, GitHub, email) + copyright
 
 ## Local Development
 
 ```bash
-# Serve locally
+# Option A: Python
 python3 -m http.server 8080
+
+# Option B: npx serve
+npx -y serve . -l 8080
 
 # Open in browser
 open http://localhost:8080
 ```
 
-No build step, no dependencies, no `node_modules`. Just HTML, CSS, and JS.
+No build step, no `node_modules`. Just HTML, CSS, and JS + CDN libraries.
 
-## Customization
-
-All content is in `index.html` — edit directly. Key files:
+## File Structure
 
 | File | Purpose |
 |------|---------|
 | `index.html` | All content and structure |
-| `styles.css` | Design system, themes, responsive rules |
-| `script.js` | Theme toggle, scroll animations, mobile menu |
-
-### Theme Colors
-
-Edit CSS variables in `:root` (dark) and `[data-theme="light"]` (light) blocks in `styles.css`.
+| `styles.css` | Design system, responsive breakpoints, card styles |
+| `script.js` | GSAP animations, Lenis smooth scroll, mobile menu, anchor navigation |
+| `fonts/` | Self-hosted Lay Grotesk `.otf` files (Regular, Medium, Semibold, Bold, Black) |
 
 ### Adding Projects
 
-Copy an existing `.project-card` block in the Projects section and update:
-- Icon class (`ph ph-*`)
+Copy an existing `.proj-card` block in the Projects section and update:
 - Title, subtitle, description
-- Tech tags
-- Repository link
+- Tech tags (`.tag` spans)
+- Repository link (optional)
+
+### Adding Experience
+
+Copy an existing `.exp-card` block in the Experience section. The GSAP animation will automatically pick it up.
 
 ## Deploy
 
@@ -73,6 +75,7 @@ Push to `main` branch — GitHub Pages deploys automatically.
 
 ## Author
 
-**João Saraiva**
-- Email: joaogabrielssaraiva@gmail.com
-- Location: Rio de Janeiro, Brasil
+**João Saraiva** — Data Engineer  
+📍 Rio de Janeiro, Brazil  
+📧 joaogabrielssaraiva@gmail.com  
+🔗 [linkedin.com/in/jsaraivx](https://linkedin.com/in/jsaraivx) · [github.com/jsaraivx](https://github.com/jsaraivx)
