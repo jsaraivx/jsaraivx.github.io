@@ -269,11 +269,11 @@ header.scrolled {
    HERO
    ========================================================================= */
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 150px 0 40px 0;
 }
 
 .hero-title {
@@ -674,7 +674,7 @@ footer {
         border-radius: 20px;
     }
 
-    .hero-section { padding: 0 1.5rem; }
+    .hero-section { padding: 120px 1.5rem 40px 1.5rem; }
     .hero-title { font-size: 2.8rem; }
     .hero-subtitle { font-size: 1rem; }
     .hero-actions { flex-direction: column; align-items: center; }
